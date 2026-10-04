@@ -87,3 +87,17 @@ El archivo `.gitignore` ha sido añadido y se tomarán las medidas necesarias pa
 **Estatus:** 5/6 de la estructura esperada.
 
 Buen avance: ya completaron `src/` y `resultados/` en `practica2` a `practica6` (antes solo `practica1` estaba completa). Les falta terminar `proyecto/`: crear dentro las carpetas `src/`, `resultados/` y `datos/`.
+
+### 23-sep-2026
+
+**Estatus:** 6/6 de la estructura esperada.
+
+¡Felicidades, completaron toda la estructura! Terminaron `proyecto/` con `datos/`, `resultados/` y `src/`.
+
+📖 **Práctica 1 ya está disponible.** La encontrarán en `labs/P1/P1_setup_reconocimiento.md`, dentro del repositorio del profesor: https://github.com/ESCOMLCD/pcd202701/blob/main/labs/P1/P1_setup_reconocimiento.md — léanla completa antes de empezar a programar, ahí está todo lo que deben hacer, el formato exacto de `resumen.txt` y la fecha de entrega (mar 6-oct).
+
+### 26-sep-2026
+
+**Estatus:** 6/6 de la estructura esperada.
+
+Siguen con la estructura completa, sin pendientes.

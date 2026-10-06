@@ -38,3 +38,33 @@ def procesar_dataset():
     
     celdas_vacias_totales = 0
     celdas_vacias_por_columna = {col: 0 for col in columnas}
+
+# 2. Recorrer línea por línea excluyendo la cabecera
+for linea in lineas[1:]:
+    linea_limpia = linea.rstrip("\n\r")
+    if not linea_limpia.strip():
+        continue
+        
+    valores = linea_limpia.split("|")
+    n_filas += 1
+    filas_datos.append(valores)
+    
+# 3. Evaluar calidad de datos (celdas vacías)
+for i, col_nombre in enumerate(columnas):
+        val = valores[i] if i < len(valores) else ""
+        if val.strip() == "":
+            celdas_vacias_totales += 1
+            celdas_vacias_por_columna[col_nombre] += 1
+
+ # 4. Análisis de la columna categórica
+    val_cat = valores[idx_cat].strip() if idx_cat < len(valores) else ""
+    if val_cat != "":
+        frecuencia_cat[val_cat] = frecuencia_cat.get(val_cat, 0) + 1
+    # 5. Análisis de la columna numérica
+    val_num_str = valores[idx_num].strip() if idx_num < len(valores) else ""
+    if val_num_str != "":
+        try:
+            num_val = float(val_num_str)
+            valores_num.append(num_val)
+        except ValueError:
+            pass

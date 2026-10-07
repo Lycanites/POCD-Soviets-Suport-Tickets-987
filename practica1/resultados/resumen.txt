@@ -1,0 +1,39 @@
+=== RESUMEN DEL DATASET ===
+Archivo: tickets_soporte-ruido_100000.csv
+Pareja: Rivera Vallejo Axel y Hernandez Castañeda Andre Alain
+Seed: 987
+
+--- Dimensiones ---
+Filas: 103000
+Columnas: 9
+Nombres de columnas: direccion, nivel_prioridad, categoria_problema, email, tiempo_resolucion_hrs, descripcion_ticket, id, telefono, timestamp
+
+--- Primeras 5 filas ---
+direccion | nivel_prioridad | categoria_problema | email | tiempo_resolucion_hrs | descripcion_ticket | id | telefono | timestamp
+Calle Juarez #1110, Col. Las Aguilas, Leon | 20.0 | Otro | jose.hernandez70@yahoo.com | 24.8 | Solicitud de cambio de plan sin exito | 2423463f87 | 58-5974-7070 | 2024-09-07 00:40:05
+Calle Morelos #1902, Col. Del Valle, Queretaro |  | Seguridad | juan.rodriguez87@live.com | 2.1 | Error al iniciar sesion desde la aplicacion movil | 3c1ac68992 | 63-4648-2202 | 2024-11-28 07:32:04
+Calle Constitucion #473, Col. Moderna, Queretaro | 4.0 | Seguridad | valentina_castro35 @ outlook.com |  | Solicitud de cambio de plan sin exito | 8d49807012 | 07-8437-6194 | 2023-09-06 17:40:32
+Calle Revolucion #1279, Col. Las Aguilas, Guadalajara | 5.0 | Software | renatamorales77@live.com | 18.9 | Falla de conexion reportada en horario nocturno | b52eb36170 | 70-4564-0717 | 2023-12-30 23:57:05
+Calle Madero #649, Col. Jardines, CDMX | 3.0 | Seguridad | ana.sanchez38@live.com | 6.6 | Consulta sobre cargo no reconocido en la factura | d1530496b5 | 92-5306-7826 | 2024-07-18 17:40:46
+
+--- Columna categórica: categoria_problema ---
+Valores únicos: 21
+Valor más frecuente: Seguridad (13729 apariciones)
+
+--- Columna numérica: tiempo_resolucion_hrs ---
+Valores válidos (no vacíos): 98884
+Mínimo: -304.0
+Máximo: 3900.0
+
+--- Calidad de datos ---
+Celdas vacías totales: 32959
+Celdas vacías por columna:
+  direccion: 4110
+  nivel_prioridad: 4115
+  categoria_problema: 4126
+  email: 4117
+  tiempo_resolucion_hrs: 4116
+  descripcion_ticket: 4133
+  id: 0
+  telefono: 4122
+  timestamp: 4120

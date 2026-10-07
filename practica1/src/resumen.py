@@ -1,5 +1,5 @@
 # Configuración de rutas mediante texto plano
-archivo_csv = "datos/tickets_soporte-ruido_100.csv"  # cambiar al de 1000
+archivo_csv = "datos/tickets_soporte-ruido_100000.csv"  # Se comprobo primero con el de 100
 archivo_salida = "practica1/resultados/resumen.txt"
 
 # Datos informativos para el reporte

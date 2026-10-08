@@ -84,6 +84,32 @@ El archivo `.gitignore` ha sido añadido y se tomarán las medidas necesarias pa
 
 ## Observaciones del profesor
 
+### Práctica 1 — evaluación (8-oct-2026, 00:51 h)
+
+**Calificación: 100 / 100**
+
+Entregada el **6-oct-2026 a las 19:02**, dentro del plazo (la entrega cerraba el mar 6-oct), así que no lleva penalización por retraso.
+
+**Criterios cubiertos al 100%:** Estructura del monorepo (6/6); Nombres exactos de los entregables; Requisitos de Git (3+ commits, rama mergeada); Python puro (sin `csv` ni `pandas`, lectura con `open`); Formato del `resumen.txt` (encabezado y secciones); Encabezado: Archivo, Pareja, Seed; Dimensiones: filas, columnas, nombres; Primeras 5 filas (separadas con barra y espacios); Columna categórica (nombre, únicos, más frecuente); Columna numérica_1 (nombre, válidos, mín, máx); Calidad de datos (celdas vacías).
+
+**Sin observaciones:** la entrega cumple con todo lo que pedía el enunciado. Buen trabajo.
+
+**Desglose:**
+
+| Criterio | Obtenido | Máximo |
+|---|:---:|:---:|
+| Estructura del monorepo (6/6) | 8 | 8 |
+| Nombres exactos de los entregables | 10 | 10 |
+| Requisitos de Git (3+ commits, rama mergeada) | 10 | 10 |
+| Python puro (sin `csv` ni `pandas`, lectura con `open`) | 8 | 8 |
+| Formato del `resumen.txt` (encabezado y secciones) | 9 | 9 |
+| Encabezado: Archivo, Pareja, Seed | 10 | 10 |
+| Dimensiones: filas, columnas, nombres | 10 | 10 |
+| Primeras 5 filas (separadas con barra y espacios) | 5 | 5 |
+| Columna categórica (nombre, únicos, más frecuente) | 12 | 12 |
+| Columna numérica_1 (nombre, válidos, mín, máx) | 13 | 13 |
+| Calidad de datos (celdas vacías) | 5 | 5 |
+| **Total** | **100** | **100** |
 ### 22-sep-2026
 
 **Estatus:** 5/6 de la estructura esperada.

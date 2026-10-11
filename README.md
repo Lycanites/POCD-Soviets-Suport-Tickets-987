@@ -9,8 +9,6 @@
 
 Tickets_Soporte
 
-📦 **Aviso:** ya está disponible su dataset en `datos/` — `tickets_soporte-ruido_100.csv` (para pruebas rápidas) y `tickets_soporte-ruido_100000.csv` (el dataset real para sus prácticas). ¡Ya pueden empezar!
-
 ## Estructura del repositorio
 
 ```text
@@ -82,34 +80,12 @@ El archivo `.gitignore` ha sido añadido y se tomarán las medidas necesarias pa
 
 ---
 
+## Avisos
+
+📦 **Aviso:** ya está disponible su dataset en `datos/` — `tickets_soporte-ruido_100.csv` (para pruebas rápidas) y `tickets_soporte-ruido_100000.csv` (el dataset real para sus prácticas). ¡Ya pueden empezar!
+
 ## Observaciones del profesor
 
-### Práctica 1 — evaluación (8-oct-2026, 00:51 h)
-
-**Calificación: 100 / 100**
-
-Entregada el **6-oct-2026 a las 19:02**, dentro del plazo (la entrega cerraba el mar 6-oct), así que no lleva penalización por retraso.
-
-**Criterios cubiertos al 100%:** Estructura del monorepo (6/6); Nombres exactos de los entregables; Requisitos de Git (3+ commits, rama mergeada); Python puro (sin `csv` ni `pandas`, lectura con `open`); Formato del `resumen.txt` (encabezado y secciones); Encabezado: Archivo, Pareja, Seed; Dimensiones: filas, columnas, nombres; Primeras 5 filas (separadas con barra y espacios); Columna categórica (nombre, únicos, más frecuente); Columna numérica_1 (nombre, válidos, mín, máx); Calidad de datos (celdas vacías).
-
-**Sin observaciones:** la entrega cumple con todo lo que pedía el enunciado. Buen trabajo.
-
-**Desglose:**
-
-| Criterio | Obtenido | Máximo |
-|---|:---:|:---:|
-| Estructura del monorepo (6/6) | 8 | 8 |
-| Nombres exactos de los entregables | 10 | 10 |
-| Requisitos de Git (3+ commits, rama mergeada) | 10 | 10 |
-| Python puro (sin `csv` ni `pandas`, lectura con `open`) | 8 | 8 |
-| Formato del `resumen.txt` (encabezado y secciones) | 9 | 9 |
-| Encabezado: Archivo, Pareja, Seed | 10 | 10 |
-| Dimensiones: filas, columnas, nombres | 10 | 10 |
-| Primeras 5 filas (separadas con barra y espacios) | 5 | 5 |
-| Columna categórica (nombre, únicos, más frecuente) | 12 | 12 |
-| Columna numérica_1 (nombre, válidos, mín, máx) | 13 | 13 |
-| Calidad de datos (celdas vacías) | 5 | 5 |
-| **Total** | **100** | **100** |
 ### 22-sep-2026
 
 **Estatus:** 5/6 de la estructura esperada.
@@ -129,3 +105,32 @@ Buen avance: ya completaron `src/` y `resultados/` en `practica2` a `practica6` 
 **Estatus:** 6/6 de la estructura esperada.
 
 Siguen con la estructura completa, sin pendientes.
+
+# Practicas
+
+### Práctica 1 — evaluación (8-oct-2026, 00:51 h)
+
+**Calificación: 100 / 100**
+
+Entregada el **6-oct-2026 a las 19:02**, dentro del plazo (la entrega cerraba el mar 6-oct), así que no lleva penalización por retraso.
+
+**Criterios cubiertos al 100%:** Estructura del monorepo (6/6); Nombres exactos de los entregables; Requisitos de Git (3+ commits, rama mergeada); Python puro (sin `csv` ni `pandas`, lectura con `open`); Formato del `resumen.txt` (encabezado y secciones); Encabezado: Archivo, Pareja, Seed; Dimensiones: filas, columnas, nombres; Primeras 5 filas (separadas con barra y espacios); Columna categórica (nombre, únicos, más frecuente); Columna numérica_1 (nombre, válidos, mín, máx); Calidad de datos (celdas vacías).
+
+**Sin observaciones:** la entrega cumple con todo lo que pedía el enunciado. Buen trabajo.
+
+**Desglose:**
+
+| Criterio                                                | Obtenido | Máximo  |
+| ------------------------------------------------------- | :------: | :-----: |
+| Estructura del monorepo (6/6)                           |    8     |    8    |
+| Nombres exactos de los entregables                      |    10    |   10    |
+| Requisitos de Git (3+ commits, rama mergeada)           |    10    |   10    |
+| Python puro (sin `csv` ni `pandas`, lectura con `open`) |    8     |    8    |
+| Formato del `resumen.txt` (encabezado y secciones)      |    9     |    9    |
+| Encabezado: Archivo, Pareja, Seed                       |    10    |   10    |
+| Dimensiones: filas, columnas, nombres                   |    10    |   10    |
+| Primeras 5 filas (separadas con barra y espacios)       |    5     |    5    |
+| Columna categórica (nombre, únicos, más frecuente)      |    12    |   12    |
+| Columna numérica_1 (nombre, válidos, mín, máx)          |    13    |   13    |
+| Calidad de datos (celdas vacías)                        |    5     |    5    |
+| **Total**                                               | **100**  | **100** |

@@ -4,7 +4,7 @@ import json
 archivo_csv = "datos/tickets_soporte-ruido_100000.csv"
 archivo_salida = "practica2/resultados/analisis_python.json"
 nombre_pareja = "Rivera Vallejo Axel y Hernandez Castañeda Andre Alain"
-seed = 987  # Convertido a entero para el JSON
+seed = 987  
 
 col_cat = "categoria_problema"
 col_num_1 = "tiempo_resolucion_hrs"
@@ -55,3 +55,48 @@ def estadisticas(datos, columna):
     crudos = map(lambda fila: fila.get(columna, ""), datos)
     convertidos = map(a_float, crudos)
     numeros = list(filter(lambda x: x is not None, convertidos))
+    if not numeros:
+        return {
+            "columna": columna,
+            "n_valores_validos": 0,
+            "minimo": None,
+            "maximo": None,
+            "promedio": None,
+            "mediana": None,
+        }
+
+    ordenados = sorted(numeros)
+    n = len(ordenados)
+
+    # Calculo de la mediana (maneja casos pares e impares)
+    if n % 2 == 1:
+        mediana = ordenados[n // 2]
+    else:
+        mediana = (ordenados[(n // 2) - 1] + ordenados[n // 2]) / 2
+
+    return {
+        "columna": columna,
+        "n_valores_validos": n,
+        "minimo": ordenados[0],
+        "maximo": ordenados[-1],
+        "promedio": round(sum(ordenados) / n, 2),
+        "mediana": round(mediana, 2),
+    }
+
+
+def promedio_por_categoria(datos, categorica, numerica):
+    """Devuelve un diccionario {categoria: promedio de la columna numerica}."""
+    acumulador = {}
+    for fila in datos:
+        cat = fila.get(categorica, "").strip()
+        val_str = fila.get(numerica, "")
+        val = a_float(val_str)
+        if cat != "" and val is not None:
+            if cat not in acumulador:
+                acumulador[cat] = []
+            acumulador[cat].append(val)
+
+    promedios = {}
+    for cat, lista_vals in acumulador.items():
+        promedios[cat] = round(sum(lista_vals) / len(lista_vals), 2)
+    return promedios

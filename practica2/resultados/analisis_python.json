@@ -1,0 +1,118 @@
+{
+  "archivo": "tickets_soporte-ruido_100000.csv",
+  "pareja": "Rivera Vallejo Axel y Hernandez Castañeda Andre Alain",
+  "seed": 987,
+  "valores_unicos_categorica": {
+    "columna": "categoria_problema",
+    "n_valores_unicos": 21,
+    "valores": [
+      "CONEXION",
+      "CUENTA",
+      "Conexion",
+      "Cuenta",
+      "FACTURACION",
+      "Facturacion",
+      "HARDWARE",
+      "Hardware",
+      "OTRO",
+      "Otro",
+      "SEGURIDAD",
+      "SOFTWARE",
+      "Seguridad",
+      "Software",
+      "conexion",
+      "cuenta",
+      "facturacion",
+      "hardware",
+      "otro",
+      "seguridad",
+      "software"
+    ]
+  },
+  "conteo_por_categoria": {
+    "Otro": 13615,
+    "Seguridad": 13729,
+    "Software": 13600,
+    "Facturacion": 13450,
+    "Conexion": 13616,
+    "Cuenta": 13532,
+    "Hardware": 13449,
+    "cuenta": 298,
+    "HARDWARE": 252,
+    "CONEXION": 317,
+    "software": 288,
+    "seguridad": 264,
+    "FACTURACION": 275,
+    "CUENTA": 281,
+    "conexion": 283,
+    "SOFTWARE": 274,
+    "otro": 247,
+    "hardware": 280,
+    "SEGURIDAD": 285,
+    "facturacion": 272,
+    "OTRO": 267
+  },
+  "categoria_mas_frecuente": {
+    "valor": "Seguridad",
+    "conteo": 13729
+  },
+  "top_3_categorias": [
+    {
+      "valor": "Seguridad",
+      "conteo": 13729
+    },
+    {
+      "valor": "Conexion",
+      "conteo": 13616
+    },
+    {
+      "valor": "Otro",
+      "conteo": 13615
+    }
+  ],
+  "estadisticas_numerica_1": {
+    "columna": "tiempo_resolucion_hrs",
+    "n_valores_validos": 98884,
+    "minimo": -304.0,
+    "maximo": 3900.0,
+    "promedio": 18.67,
+    "mediana": 9.6
+  },
+  "estadisticas_numerica_2": {
+    "columna": "nivel_prioridad",
+    "n_valores_validos": 98885,
+    "minimo": -50.0,
+    "maximo": 600.0,
+    "promedio": 5.25,
+    "mediana": 3.0
+  },
+  "promedio_por_categoria": {
+    "Otro": 18.41,
+    "Seguridad": 17.33,
+    "Software": 18.97,
+    "Facturacion": 18.94,
+    "Conexion": 18.68,
+    "Cuenta": 20.38,
+    "Hardware": 18.45,
+    "cuenta": 17.01,
+    "HARDWARE": 15.87,
+    "CONEXION": 15.53,
+    "software": 16.09,
+    "seguridad": 16.19,
+    "FACTURACION": 14.93,
+    "CUENTA": 15.06,
+    "conexion": 20.2,
+    "SOFTWARE": 20.8,
+    "otro": 18.89,
+    "hardware": 18.51,
+    "SEGURIDAD": 19.22,
+    "facturacion": 18.7,
+    "OTRO": 15.9
+  },
+  "filtrado": {
+    "condicion": "tiempo_resolucion_hrs > 28.4",
+    "umbral_usado": 28.4,
+    "n_registros_que_cumplen": 9806,
+    "porcentaje": 9.92
+  }
+}

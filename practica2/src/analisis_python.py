@@ -1,6 +1,6 @@
 import json
 
-archivo_csv = "datos/tickets_soporte-ruido_100.csv"
+archivo_csv = "datos/tickets_soporte-ruido_100000.csv"
 archivo_salida = "practica2/resultados/analisis_python.json"
 nombre_pareja = "Rivera Vallejo Axel y Hernandez Castañeda Andre Alain"
 seed = 987  
@@ -128,7 +128,7 @@ def generar_analisis():
     # 4. Top 3 categorias (ordenadas de mayor a menor, desempatando alfabeticamente)
     top_3_tuplas = sorted(
         conteo.items(), key=lambda par: (-par[1], par[0])
-    )[:3]
+        )[:3]
     top_3_categorias = [{"valor": val, "conteo": cnt} for val, cnt in top_3_tuplas]
 
     # 5. Estadisticas numericas

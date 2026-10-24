@@ -100,3 +100,83 @@ def promedio_por_categoria(datos, categorica, numerica):
     for cat, lista_vals in acumulador.items():
         promedios[cat] = round(sum(lista_vals) / len(lista_vals), 2)
     return promedios
+
+# 1. Valores unicos categoricos
+    set_unicos = valores_unicos(datos, col_cat)
+    n_unicos = len(set_unicos)
+    lista_unicos_ordenada = sorted(set_unicos)
+
+    # 2. Conteo por categoria
+    conteo = conteo_por_categoria(datos, col_cat)
+
+    # 3. Categoria mas frecuente
+    if conteo:
+        cat_max = max(conteo, key=conteo.get)
+        cat_mas_frecuente = {"valor": cat_max, "conteo": conteo[cat_max]}
+    else:
+        cat_mas_frecuente = {"valor": "N/A", "conteo": 0}
+
+    # 4. Top 3 categorias (ordenadas de mayor a menor, desempatando alfabeticamente)
+    top_3_tuplas = sorted(
+        conteo.items(), key=lambda par: (-par[1], par[0])
+    )[:3]
+    top_3_categorias = [{"valor": val, "conteo": cnt} for val, cnt in top_3_tuplas]
+
+    # 5. Estadisticas numericas
+    stats_1 = estadisticas(datos, col_num_1)
+    stats_2 = estadisticas(datos, col_num_2)
+
+    # 6. Promedio por categoria
+    prom_cat = promedio_por_categoria(datos, col_cat, col_num_1)
+
+    # 7. Filtrado con filter y lambda usando el percentil 90
+    numeros_num1 = list(
+        filter(lambda x: x is not None, map(a_float, map(lambda f: f.get(col_num_1, ""), datos)))
+    )
+    ordenados_num1 = sorted(numeros_num1)
+    n_vals = len(ordenados_num1)
+    
+    umbral = 0.0
+    if n_vals > 0:
+        pos_90 = int(0.9 * n_vals)
+        pos_90 = min(pos_90, n_vals - 1)
+        umbral = ordenados_num1[pos_90]
+
+    registros_filtrados = list(
+        filter(lambda fila: (a_float(fila.get(col_num_1, "")) or 0) > umbral, datos)
+    )
+    n_cumplen = len(registros_filtrados)
+    porcentaje = round(100 * n_cumplen / n_vals, 2) if n_vals > 0 else 0.0
+
+    # Estructura del resultado final acorde a la plantilla JSON solicitada
+    resultado = {
+        "archivo": archivo_csv.split("/")[-1],
+        "pareja": nombre_pareja,
+        "seed": seed,
+        "valores_unicos_categorica": {
+            "columna": col_cat,
+            "n_valores_unicos": n_unicos,
+            "valores": lista_unicos_ordenada,
+        },
+        "conteo_por_categoria": conteo,
+        "categoria_mas_frecuente": cat_mas_frecuente,
+        "top_3_categorias": top_3_categorias,
+        "estadisticas_numerica_1": stats_1,
+        "estadisticas_numerica_2": stats_2,
+        "promedio_por_categoria": prom_cat,
+        "filtrado": {
+            "condicion": f"{col_num_1} > {umbral}",
+            "umbral_usado": umbral,
+            "n_registros_que_cumplen": n_cumplen,
+            "porcentaje": porcentaje,
+        },
+    }
+
+    # Guardar en JSON
+    with open(archivo_salida, "w", encoding="utf-8") as f_salida:
+        json.dump(resultado, f_salida, indent=2, ensure_ascii=False)
+
+    print(f"¡Éxito! El archivo analisis_python.json se ha generado correctamente en: {archivo_salida}")
+
+    if __name__ == "__main__":
+        generar_analisis()

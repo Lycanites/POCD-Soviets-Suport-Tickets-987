@@ -54,6 +54,7 @@ def estadisticas(datos, columna):
     crudos = map(lambda fila: fila.get(columna, ""), datos)
     convertidos = map(a_float, crudos)
     numeros = list(filter(lambda x: x is not None, convertidos))
+
     if not numeros:
         return {
             "columna": columna,
@@ -100,6 +101,7 @@ def promedio_por_categoria(datos, categorica, numerica):
         promedios[cat] = round(sum(lista_vals) / len(lista_vals), 2)
     return promedios
 
+
 def generar_analisis():
     print(f"Leyendo archivo: {archivo_csv}...")
     datos = leer_csv(archivo_csv)
@@ -108,7 +110,7 @@ def generar_analisis():
         print("El archivo esta vacio o no se pudo leer.")
         return
 
-# 1. Valores unicos categoricos
+    # 1. Valores unicos categoricos
     set_unicos = valores_unicos(datos, col_cat)
     n_unicos = len(set_unicos)
     lista_unicos_ordenada = sorted(set_unicos)
@@ -184,6 +186,7 @@ def generar_analisis():
         json.dump(resultado, f_salida, indent=2, ensure_ascii=False)
 
     print(f"¡Éxito! El archivo analisis_python.json se ha generado correctamente en: {archivo_salida}")
+
 
 if __name__ == "__main__":
     generar_analisis()

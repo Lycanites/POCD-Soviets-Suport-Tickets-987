@@ -101,6 +101,14 @@ def promedio_por_categoria(datos, categorica, numerica):
         promedios[cat] = round(sum(lista_vals) / len(lista_vals), 2)
     return promedios
 
+def generar_analisis():
+    print(f"Leyendo archivo: {archivo_csv}...")
+    datos = leer_csv(archivo_csv)
+
+    if not datos:
+        print("El archivo esta vacio o no se pudo leer.")
+        return
+
 # 1. Valores unicos categoricos
     set_unicos = valores_unicos(datos, col_cat)
     n_unicos = len(set_unicos)

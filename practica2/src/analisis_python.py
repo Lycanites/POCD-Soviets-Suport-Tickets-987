@@ -1,7 +1,6 @@
 import json
 
-# Configuración inicial basada en tus datos
-archivo_csv = "datos/tickets_soporte-ruido_100000.csv"
+archivo_csv = "datos/tickets_soporte-ruido_100.csv"
 archivo_salida = "practica2/resultados/analisis_python.json"
 nombre_pareja = "Rivera Vallejo Axel y Hernandez Castañeda Andre Alain"
 seed = 987  
@@ -186,5 +185,5 @@ def generar_analisis():
 
     print(f"¡Éxito! El archivo analisis_python.json se ha generado correctamente en: {archivo_salida}")
 
-    if __name__ == "__main__":
-        generar_analisis()
+if __name__ == "__main__":
+    generar_analisis()

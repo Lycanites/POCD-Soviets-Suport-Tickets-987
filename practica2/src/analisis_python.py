@@ -24,11 +24,13 @@ def leer_csv(ruta, separador="|"):
 
 
 def a_float(texto):
-    """Intenta convertir un texto a float; devuelve None si no es posible."""
     try:
-        return float(texto)
+        x = float(texto)
     except (ValueError, TypeError):
         return None
+    if x != x or x in (float("inf"), float("-inf")):   # descarta nan e inf
+        return None
+    return x
 
 
 def valores_unicos(datos, columna):

@@ -52,8 +52,8 @@ def estadisticas(datos, columna):
     """Calcula min, max, promedio, mediana y n_valores_validos de una columna numerica."""
     # Filtrar valores no vacios y mapear a float de forma segura
     crudos = map(lambda fila: fila.get(columna, ""), datos)
-    convertidos = map(a_float, crudos)
-    numeros = list(filter(lambda x: x is not None, convertidos))
+    validos = filter(lambda v: a_float(v) is not None, crudos)   # 1) filtrar
+    numeros = list(map(float, validos))                          # 2) convertir
 
     if not numeros:
         return {

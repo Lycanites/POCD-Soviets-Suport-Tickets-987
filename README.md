@@ -134,3 +134,30 @@ Entregada el **6-oct-2026 a las 19:02**, dentro del plazo (la entrega cerraba el
 | Columna numérica_1 (nombre, válidos, mín, máx)          |    13    |   13    |
 | Calidad de datos (celdas vacías)                        |    5     |    5    |
 | **Total**                                               | **100**  | **100** |
+
+### Práctica 2 — Procesamiento de datos con Python puro
+
+Análisis del dataset completo (100,000 registros) usando solo la biblioteca estándar. El código utiliza funciones reutilizables y programación funcional (lambda, map, filter), sin csv, pandas, collections.Counter ni statistics.
+
+El script practica2/src/analisis_python.py calcula:
+
+los valores únicos y el conteo por categoría de categoria_problema;
+la categoría más frecuente y el top 3;
+el mínimo, el máximo, el promedio y la mediana de tiempo_resolucion_hrs y nivel_prioridad;
+el promedio de tiempo_resolucion_hrs por categoría;
+los registros por encima del percentil 90 de tiempo_resolucion_hrs.
+
+Para ejecutarlo, desde la raíz del repositorio:
+
+bash
+python practica2/src/analisis_python.py
+
+El resultado se guarda en practica2/resultados/analisis_python.json.
+
+Observación: variantes de escritura en las categorías
+
+Como solo aplicamos .strip(), sin unificar mayúsculas ni minúsculas, salieron 21 categorías en lugar de 7. Cada categoría real aparece escrita de tres formas: Cuenta, CUENTA y cuenta.
+
+Esto afecta a promedio_por_categoria, porque una misma categoría queda partida en tres promedios distintos. Por ejemplo, Cuenta promedia 20.38 hrs, CUENTA 15.06 hrs y cuenta 17.01 hrs. Las variantes con pocos registros (unos 250–320 cada una) dan promedios más inestables que la forma principal (unos 13,500). Esto lo vamos a corregir en P4 y P5 con pandas.
+
+También notamos valores fuera de rango en las columnas numéricas. Hay tiempos de resolución negativos (mínimo de -304 hrs) y niveles de prioridad de -50 y 600. Son ruido del dataset que todavía no se limpia en esta práctica.

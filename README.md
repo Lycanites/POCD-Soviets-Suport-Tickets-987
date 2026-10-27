@@ -86,27 +86,33 @@ El archivo `.gitignore` ha sido añadido y se tomarán las medidas necesarias pa
 
 ## Observaciones del profesor
 
-### 22-sep-2026
+### Práctica 2 — evaluación (27-oct-2026)
 
-**Estatus:** 5/6 de la estructura esperada.
+**Calificación: 100 / 100**
 
-Buen avance: ya completaron `src/` y `resultados/` en `practica2` a `practica6` (antes solo `practica1` estaba completa). Les falta terminar `proyecto/`: crear dentro las carpetas `src/`, `resultados/` y `datos/`.
+Entregada el **25-oct-2026 a las 16:18**, dentro del plazo (la entrega cerraba el lun 26-oct), así que no lleva penalización por retraso.
 
-### 23-sep-2026
+**Práctica correcta.** Los doce criterios salieron completos: el JSON coincide campo por campo con la solución de referencia de su tema y su semilla —conteos exactos y promedios dentro de tolerancia— y el código cumple todos los requisitos. Nada que corregir.
 
-**Estatus:** 6/6 de la estructura esperada.
+**Lo que destaca:** 8 `lambda` —el uso más intensivo de programación funcional del grupo— y 9 commits sobre `practica2/`. Documentaron en su `README.md` la observación del paso 6 con sus propios números: 21 categorías en lugar de 7 por no unificar mayúsculas.
 
-¡Felicidades, completaron toda la estructura! Terminaron `proyecto/` con `datos/`, `resultados/` y `src/`.
+**Desglose:**
 
-📖 **Práctica 1 ya está disponible.** La encontrarán en `labs/P1/P1_setup_reconocimiento.md`, dentro del repositorio del profesor: https://github.com/ESCOMLCD/pcd202701/blob/main/labs/P1/P1_setup_reconocimiento.md — léanla completa antes de empezar a programar, ahí está todo lo que deben hacer, el formato exacto de `resumen.txt` y la fecha de entrega (mar 6-oct).
-
-### 26-sep-2026
-
-**Estatus:** 6/6 de la estructura esperada.
-
-Siguen con la estructura completa, sin pendientes.
-
-# Practicas
+| Criterio | Obtenido | Máximo |
+|---|:---:|:---:|
+| Nombres exactos de los entregables | 10 | 10 |
+| Requisitos de Git (3+ commits, rama integrada) | 8 | 8 |
+| Requisitos de código (5 funciones, `lambda`, `map`/`filter`) | 12 | 12 |
+| Encabezado del JSON: archivo, pareja, seed | 6 | 6 |
+| `valores_unicos_categorica` | 10 | 10 |
+| `conteo_por_categoria` | 10 | 10 |
+| `categoria_mas_frecuente` | 6 | 6 |
+| `top_3_categorias` | 8 | 8 |
+| `estadisticas_numerica_1` (con mediana) | 12 | 12 |
+| `estadisticas_numerica_2` (con mediana) | 8 | 8 |
+| `promedio_por_categoria` | 6 | 6 |
+| `filtrado` (percentil 90) | 4 | 4 |
+| **Total** | **100** | **100** |
 
 ### Práctica 1 — evaluación (8-oct-2026, 00:51 h)
 
@@ -134,6 +140,28 @@ Entregada el **6-oct-2026 a las 19:02**, dentro del plazo (la entrega cerraba el
 | Columna numérica_1 (nombre, válidos, mín, máx)          |    13    |   13    |
 | Calidad de datos (celdas vacías)                        |    5     |    5    |
 | **Total**                                               | **100**  | **100** |
+
+### 26-sep-2026
+
+**Estatus:** 6/6 de la estructura esperada.
+
+Siguen con la estructura completa, sin pendientes.
+
+### 23-sep-2026
+
+**Estatus:** 6/6 de la estructura esperada.
+
+¡Felicidades, completaron toda la estructura! Terminaron `proyecto/` con `datos/`, `resultados/` y `src/`.
+
+📖 **Práctica 1 ya está disponible.** La encontrarán en `labs/P1/P1_setup_reconocimiento.md`, dentro del repositorio del profesor: https://github.com/ESCOMLCD/pcd202701/blob/main/labs/P1/P1_setup_reconocimiento.md — léanla completa antes de empezar a programar, ahí está todo lo que deben hacer, el formato exacto de `resumen.txt` y la fecha de entrega (mar 6-oct).
+
+### 22-sep-2026
+
+**Estatus:** 5/6 de la estructura esperada.
+
+Buen avance: ya completaron `src/` y `resultados/` en `practica2` a `practica6` (antes solo `practica1` estaba completa). Les falta terminar `proyecto/`: crear dentro las carpetas `src/`, `resultados/` y `datos/`.
+
+# Practicas
 
 ### Práctica 2 — Procesamiento de datos con Python puro
 

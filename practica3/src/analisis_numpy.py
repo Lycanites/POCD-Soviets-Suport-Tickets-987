@@ -124,10 +124,10 @@ def ejecutar_benchmark(arr_validos):
 
 def main():
     # Rutas basadas estrictamente en la estructura del monorepo
-    ruta_csv = "datos/tickets_soporte-ruido_100.csv"
+    ruta_csv = "datos/tickets_soporte-ruido_100000.csv"
     ruta_json = "practica3/resultados/analisis_numpy.json"
     
-    archivo_tema = "tickets_soporte-ruido_100.csv"
+    archivo_tema = "tickets_soporte-ruido_100000.csv"
     seed = 987
 
     # Nombres de las columnas numéricas para tickets_soporte
@@ -152,7 +152,7 @@ def main():
     # Estructura del JSON final
     resultado_final = {
         "archivo": archivo_tema,
-        "pareja": "Axel Rivera Vallejo",
+        "pareja": "Rivera Vallejo Axel y Hernandez Castañeda Andre Alain",
         "seed": seed,
         "numerica_1": resumen_1,
         "numerica_2": resumen_2,

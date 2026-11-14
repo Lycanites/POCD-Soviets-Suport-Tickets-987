@@ -189,3 +189,17 @@ Como solo aplicamos .strip(), sin unificar mayúsculas ni minúsculas, salieron 
 Esto afecta a promedio_por_categoria, porque una misma categoría queda partida en tres promedios distintos. Por ejemplo, Cuenta promedia 20.38 hrs, CUENTA 15.06 hrs y cuenta 17.01 hrs. Las variantes con pocos registros (unos 250–320 cada una) dan promedios más inestables que la forma principal (unos 13,500). Esto lo vamos a corregir en P4 y P5 con pandas.
 
 También notamos valores fuera de rango en las columnas numéricas. Hay tiempos de resolución negativos (mínimo de -304 hrs) y niveles de prioridad de -50 y 600. Son ruido del dataset que todavía no se limpia en esta práctica.
+
+### Práctica 3 — Estadística descriptiva con NumPy
+
+Análisis del dataset completo (100,000 registros) usando NumPy y la biblioteca estándar, sin utilizar pandas ni el módulo `csv`. El código implementa funciones modulares para procesamiento vectorizado, análisis estadístico y pruebas de rendimiento.
+
+El script `practica3/src/analisis_numpy.py` calcula:
+la carga de las dos columnas numéricas (`tiempo_resolucion_hrs` y `nivel_prioridad`) localizándolas de forma dinámica por su nombre en la cabecera; el resumen estadístico completo de ambas columnas obteniendo 8 métricas clave (`n_valores_validos`, `media`, `desviacion_estandar` poblacional con `ddof=0`, `minimo`, `maximo`, `mediana`, `percentil_25` y `percentil_75`); la detección de valores atípicos (outliers) mediante el método de $\pm 3$ desviaciones estándar, reportando límites inferior y superior, número de outliers, porcentaje, y los valores mínimo y máximo atípicos; y un benchmark que mide y compara el tiempo de cálculo de la media y la desviación estándar entre un bucle `for` de Python puro y el enfoque vectorizado de NumPy utilizando `time.perf_counter()`.
+
+Para ejecutarlo, desde la raíz del repositorio:
+bash
+python practica3/src/analisis_numpy.py
+
+El resultado se guarda en practica3/resultados/analisis_numpy.json.Observación: rendimiento y comportamiento de los outliers
+El benchmark evidenció de forma drástica la ventaja de NumPy: mientras que el bucle de Python puro procesa los datos elemento por elemento de forma iterativa, el bloque vectorizado de NumPy realiza el cálculo en milisegundos, logrando un factor de velocidad muy elevado gracias a sus bloques de memoria contigua y ejecución en C.Asimismo, se notó que la regla de $\pm 3$ desviaciones estándar sigue incluyendo el ruido numérico heredado de las fases previas (como los tiempos de resolución negativos y valores extremos en el nivel de prioridad). Al tratarse de datos válidos bajo las reglas de esta práctica, dichos valores participan en el cálculo de la media y la desviación estándar, afectando sutilmente la amplitud de los límites de detección.

@@ -121,3 +121,52 @@ def ejecutar_benchmark(arr_validos):
         "factor_velocidad": factor,
         "operacion_medida": "calcular media y desviacion estandar"
     }
+
+def main():
+    # Rutas basadas estrictamente en la estructura del monorepo
+    ruta_csv = "datos/tickets_soporte-ruido_100.csv"
+    ruta_json = "practica3/resultados/analisis_numpy.json"
+    
+    archivo_tema = "tickets_soporte-ruido_100.csv"
+    seed = 987
+
+    # Nombres de las columnas numéricas para tickets_soporte
+    col_1 = "tiempo_resolucion_hrs"
+    col_2 = "nivel_prioridad"
+
+    # Cargar columnas por nombre desde la cabecera
+    nombre_1, _, validos_1 = cargar_columna_csv(ruta_csv, col_1)
+    nombre_2, _, validos_2 = cargar_columna_csv(ruta_csv, col_2)
+    
+    # Calcular estadísticos
+    resumen_1 = calcular_resumen_estadistico(nombre_1, validos_1)
+    resumen_2 = calcular_resumen_estadistico(nombre_2, validos_2)
+    
+    # Detectar outliers
+    outliers_1 = detectar_outliers_sigma(validos_1, k=3)
+    outliers_2 = detectar_outliers_sigma(validos_2, k=3)
+    
+    # Benchmark sobre numerica_1
+    benchmark_res = ejecutar_benchmark(validos_1)
+    
+    # Estructura del JSON final
+    resultado_final = {
+        "archivo": archivo_tema,
+        "pareja": "Axel Rivera Vallejo",
+        "seed": seed,
+        "numerica_1": resumen_1,
+        "numerica_2": resumen_2,
+        "outliers_numerica_1": outliers_1,
+        "outliers_numerica_2": outliers_2,
+        "benchmark": benchmark_res
+    }
+    
+    # Guardar archivo JSON
+    with open(ruta_json, "w", encoding="utf-8") as f:
+        json.dump(resultado_final, f, indent=2, ensure_ascii=False)
+        
+    print(f"Análisis completado exitosamente. JSON guardado en: {ruta_json}")
+
+
+if __name__ == "__main__":
+    main()

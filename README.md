@@ -201,5 +201,9 @@ Para ejecutarlo, desde la raíz del repositorio:
 bash
 python practica3/src/analisis_numpy.py
 
-El resultado se guarda en practica3/resultados/analisis_numpy.json.Observación: rendimiento y comportamiento de los outliers
-El benchmark evidenció de forma drástica la ventaja de NumPy: mientras que el bucle de Python puro procesa los datos elemento por elemento de forma iterativa, el bloque vectorizado de NumPy realiza el cálculo en milisegundos, logrando un factor de velocidad muy elevado gracias a sus bloques de memoria contigua y ejecución en C.Asimismo, se notó que la regla de $\pm 3$ desviaciones estándar sigue incluyendo el ruido numérico heredado de las fases previas (como los tiempos de resolución negativos y valores extremos en el nivel de prioridad). Al tratarse de datos válidos bajo las reglas de esta práctica, dichos valores participan en el cálculo de la media y la desviación estándar, afectando sutilmente la amplitud de los límites de detección.
+El resultado se guarda en practica3/resultados/analisis_numpy.json.
+
+Observación: rendimiento y comportamiento de los outliers
+El benchmark evidenció de forma drástica la ventaja de NumPy: mientras que el bucle de Python puro procesa los datos elemento por elemento de forma iterativa, el bloque vectorizado de NumPy realiza el cálculo en milisegundos, logrando un factor de velocidad muy elevado gracias a sus bloques de memoria contigua y ejecución en C. 
+
+Ademas, se notó que la regla de $\pm 3$ desviaciones estándar sigue incluyendo el ruido numérico heredado de las fases previas (como los tiempos de resolución negativos y valores extremos en el nivel de prioridad). Al tratarse de datos válidos bajo las reglas de esta práctica, dichos valores participan en el cálculo de la media y la desviación estándar, afectando sutilmente la amplitud de los límites de detección.

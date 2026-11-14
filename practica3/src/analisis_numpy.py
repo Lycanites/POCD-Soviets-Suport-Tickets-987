@@ -3,12 +3,7 @@ import time
 import numpy as np
 
 
-def a_float(texto):
-    """Convierte texto a float; devuelve np.nan si no se puede."""
-    try:
-        return float(texto.strip())
-    except (ValueError, AttributeError):
-        return np.nan
+
 
 
 def cargar_columna_csv(ruta_csv, nombre_columna_objetivo):

@@ -1,0 +1,52 @@
+{
+  "archivo": "tickets_soporte-ruido_100000.csv",
+  "pareja": "Rivera Vallejo Axel y Hernandez Castañeda Andre Alain",
+  "seed": 987,
+  "numerica_1": {
+    "columna": "tiempo_resolucion_hrs",
+    "n_valores_validos": 98884,
+    "media": 18.67,
+    "desviacion_estandar": 59.92,
+    "minimo": -304.0,
+    "maximo": 3900.0,
+    "mediana": 9.6,
+    "percentil_25": 2.6,
+    "percentil_75": 18.4
+  },
+  "numerica_2": {
+    "columna": "nivel_prioridad",
+    "n_valores_validos": 98885,
+    "media": 5.25,
+    "desviacion_estandar": 13.56,
+    "minimo": -50.0,
+    "maximo": 600.0,
+    "mediana": 3.0,
+    "percentil_25": 2.0,
+    "percentil_75": 4.0
+  },
+  "outliers_numerica_1": {
+    "metodo": "desviacion_estandar_3",
+    "limite_inferior": -161.1,
+    "limite_superior": 198.44,
+    "n_outliers": 1355,
+    "porcentaje": 1.37,
+    "outliers_minimo": -304.0,
+    "outliers_maximo": 3900.0
+  },
+  "outliers_numerica_2": {
+    "metodo": "desviacion_estandar_3",
+    "limite_inferior": -35.43,
+    "limite_superior": 45.94,
+    "n_outliers": 1046,
+    "porcentaje": 1.06,
+    "outliers_minimo": -50.0,
+    "outliers_maximo": 600.0
+  },
+  "benchmark": {
+    "n_filas": 98884,
+    "tiempo_bucle_python_seg": 0.010808,
+    "tiempo_numpy_seg": 0.000254,
+    "factor_velocidad": 42.52,
+    "operacion_medida": "calcular media y desviacion estandar"
+  }
+}
